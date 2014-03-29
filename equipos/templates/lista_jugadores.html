@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<div class="container">
+{% block header %}
+    <h1>Jugadores</h1>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+	{% for jugador in object_list %}
+            <div class="col-md-4">
+		
+		<img width="50" height="50" src='{{ MEDIA_URL }}{{ jugador.foto }} '></img>
+		<h4><a href='../player/{{ jugador.id }}/player.html '>{{ jugador }}</a></h4>
+                <p>{{ jugador.equipo }}</p>
+            </div>
+	{% endfor %}
+    </div> 
+</div> <!-- /container -->
+{% endblock %}

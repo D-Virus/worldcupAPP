@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+<div class="container">
+{% block header %}
+    <h1>{{ jugador.nombreJugador }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+    <img src='{{ MEDIA_URL }}{{ jugador.foto }}'></img>
+
+    <h2>{{ jugador.posicion | title }}</h2>
+    <p>Equipo: {{ jugador.equipo | title }}</p>
+    <p>Goles: {{ jugador.goles | title }}</p>
+    <p>Edad: {{ jugador.edad}}</p>
+    <p>Píe Hábil: {{ jugador.pie | title }}</p>
+
+
+
+    </div>
+</div> <!-- /container -->
+{% endblock %}
